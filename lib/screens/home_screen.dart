@@ -62,22 +62,31 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               Expanded(
                 flex: 2,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                  ),
+
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+
                     children: <Widget>[
+                      Flexible(
+
+
+                          child: SvgPicture.asset(
+                            'assets/images/logo.svg',
+                            alignment: Alignment.topCenter,
+                          ),
+
+                      ),
                       Flexible(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                            horizontal: 4.0,
+                            horizontal: 1.0,
                           ),
+
                           child: SvgPicture.asset(
                             'assets/images/yoga.svg',
+                            height: 10000.0,
+                            width: 10000.0,
                             alignment: Alignment.bottomCenter,
+
                           ),
                         ),
                       ),
@@ -88,11 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: FittedBox(
                             child: Text(
-                              'I\'m feeling . . .',
+                              'How Are You Feeling ...',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1.2,
-                                fontSize: 24.0,
+                                fontSize: 18.0,
                               ),
                             ),
                           ),
@@ -101,30 +110,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-              ),
+              
               Flexible(
-                flex: 1,
+                flex: 2,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 10.0,
-                    vertical: 2.0,
+                    vertical: 0.0,
                   ),
                   color: Colors.white,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      EmojiButton(
-                        height: 50.0,
-                        emoji: '😰',
-                        title: 'Anxious',
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          TriageScreen.routeName,
-                          arguments: <String, dynamic>{
-                            'problem': Problem.Anxiety
-                          },
-                        ),
-                      ),
+
                       EmojiButton(
                         height: 50.0,
                         emoji: '😫',
@@ -138,6 +137,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       EmojiButton(
                         height: 50.0,
+                        emoji: '😔',
+                        title: 'Sad',
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          TriageScreen.routeName,
+                          arguments: <String, dynamic>{
+                            'problem': Problem.Sad,
+                          },
+                        ),
+                      ),
+                      EmojiButton(
+                        height: 50.0,
+                        emoji: '😠',
+                        title: 'Angry',
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          TriageScreen.routeName,
+                          arguments: <String, dynamic>{
+                            'problem': Problem.Angry,
+                          },
+                        ),
+                      ),
+
+
+                      EmojiButton(
+                        height: 50.0,
                         emoji: '😞',
                         title: 'Depressed',
                         onPressed: () => Navigator.of(context).pushNamed(
@@ -147,6 +170,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       ),
+                      EmojiButton(
+                        height: 50.0,
+                        emoji: '😰',
+                        title: 'Anxious',
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          TriageScreen.routeName,
+                          arguments: <String, dynamic>{
+                            'problem': Problem.Anxiety
+                          },
+                        ),
+                      ),
+
                     ],
                   ),
                 ),

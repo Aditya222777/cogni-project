@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-enum Problem { Anxiety, Stress, Depression }
+enum Problem { Anxiety, Stress, Depression ,Sad,Angry}
 
 class ProblemDetails {
   final Problem type;
@@ -22,6 +22,10 @@ ProblemDetails getProblemDetails(Problem type) {
       return ProblemDetails(Problem.Stress, 'stress', 'stressed');
     case Problem.Depression:
       return ProblemDetails(Problem.Depression, 'depression', 'depressed');
+    case Problem.Sad:
+      return ProblemDetails(Problem.Sad, 'Sadness', 'Sad');
+    case Problem.Angry:
+      return ProblemDetails(Problem.Angry, 'Anger', 'Angry');
     default:
       throw Exception('Problem type is not recognised.');
   }

@@ -36,21 +36,21 @@ class CheckBackScreen extends StatelessWidget {
           children: <Widget>[
             LayoutBuilder(
                 builder: (ctx, constraints) => Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.fromLTRB(80.0, 0.0, 0.0, 30.0),
-                      height: constraints.maxHeight - 67.0,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Flexible(
-                            child: SvgPicture.asset(
-                              'assets/images/drive.svg',
-                              alignment: Alignment.bottomCenter,
-                            ),
-                          ),
-                        ],
+                  width: double.infinity,
+                  padding: const EdgeInsets.fromLTRB(80.0, 0.0, 0.0, 30.0),
+                  height: constraints.maxHeight - 67.0,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Flexible(
+                        child: SvgPicture.asset(
+                          'assets/images/drive.svg',
+                          alignment: Alignment.bottomCenter,
+                        ),
                       ),
-                    )),
+                    ],
+                  ),
+                )),
             LayoutBuilder(
               builder: (ctx, constraints) => Container(
                 width: double.infinity,
@@ -99,7 +99,7 @@ class CheckBackScreen extends StatelessWidget {
                           itemCount: challenge.activities.length,
                           itemBuilder: (ctx, index) {
                             final activity =
-                                challenge.activities.toList()[index];
+                            challenge.activities.toList()[index];
                             return Padding(
                               padding: const EdgeInsets.symmetric(
                                 vertical: 4.0,
@@ -109,7 +109,7 @@ class CheckBackScreen extends StatelessWidget {
                                 title: activity.name,
                                 enableSubtitle: true,
                                 subtitle:
-                                    '${activity.credits} $creditsProblemWord Credits',
+                                '${activity.credits} $creditsProblemWord Credits',
                                 backgroundColor: Colors.white,
                                 outlineColor: Colors.white,
                                 onPressed: () {},
@@ -132,7 +132,7 @@ class CheckBackScreen extends StatelessWidget {
                     child: AlertDialog(
                       title: Text('Great Job ${challenge.reward.emoji}'),
                       content: Text(
-                        'Reward yourself now with a/an ${challenge.reward.name.toLowerCase()} for the hard work you\'ve put in!',
+                        'Hope you feel good now.. So reward yourself now with a/an ${challenge.reward.name.toLowerCase()} for the hard work you\'ve put in!',
                       ),
                       actions: <Widget>[
                         FlatButton(

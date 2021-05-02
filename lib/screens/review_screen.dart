@@ -124,9 +124,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
                       textColor: theme.accentColor,
                       onPressed: () =>
                           Navigator.of(context).pushNamedAndRemoveUntil(
-                        '/',
-                        (route) => false,
-                      ),
+                            '/',
+                                (route) => false,
+                          ),
                     );
                     final tryAgainButton = FlatButton(
                       child: Text('Try Again'),
@@ -147,35 +147,35 @@ class _ReviewScreenState extends State<ReviewScreen> {
                       textColor: theme.accentColor,
                       onPressed: () =>
                           Navigator.of(context).pushNamedAndRemoveUntil(
-                        '/',
-                        (route) => false,
-                      ),
+                            '/',
+                                (route) => false,
+                          ),
                     );
 
                     if (_updatedLevel < 1) {
                       dialogMessage =
-                          'Congratulations on getting your ${_challenge.problem.noun} levels down to zero! You rock 🤘';
+                      'Congratulations on getting your ${_challenge.problem.noun} levels down to zero! You rock 🤘';
                       dialogActions.add(okayButton);
                     } else if (_updatedLevel < _challenge.idealLevel) {
                       dialogMessage =
-                          'Your ${_challenge.problem.noun} level seems better than ideal, keep up the good work!';
+                      'Your ${_challenge.problem.noun} level seems better than ideal, keep up the good work!';
                       dialogActions.addAll([takeABreakButton, tryAgainButton]);
                     } else if (_updatedLevel == _challenge.idealLevel) {
                       dialogMessage =
-                          'Good job spending all your ${_challenge.problem.noun} credits, you\'re getting better!';
+                      'Good job! Now you spend all your ${_challenge.problem.noun} credits, you\'re getting better! With the same positive mind you can acheive anything';
                       dialogActions.addAll([takeABreakButton, tryAgainButton]);
                     } else if (_updatedLevel > _challenge.idealLevel &&
                         _updatedLevel < _challenge.initialLevel) {
                       dialogMessage =
-                          'Don\'t give up, you made great effort spending your ${_challenge.problem.noun} credits!';
+                      'Don\'t give up, you made great effort spending your ${_challenge.problem.noun} credits!';
                       dialogActions.addAll([takeABreakButton, tryAgainButton]);
                     } else if (_updatedLevel < 7) {
                       dialogMessage =
-                          'We take some steps forward, some steps backwards, but most importantly, we\'re progressing!';
+                      'We take some steps forward, some steps backwards, but most importantly, we\'re progressing!';
                       dialogActions.addAll([takeABreakButton, tryAgainButton]);
                     } else {
                       dialogMessage =
-                          'Progress takes time, you\'re putting in effort and that\'s all that matters! Do talk to someone if your ${_challenge.problem.noun} persists 💪';
+                      'Progress takes time, you\'re putting in effort and that\'s all that matters! Do talk to someone if your ${_challenge.problem.noun} persists 💪';
                       dialogActions.addAll([takeABreakButton, tryAgainButton]);
                     }
 

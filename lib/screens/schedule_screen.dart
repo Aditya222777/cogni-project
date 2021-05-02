@@ -38,7 +38,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     super.didChangeDependencies();
     if (_isInit) {
       final params =
-          ModalRoute.of(context).settings.arguments as Map<String, dynamic>;
+      ModalRoute.of(context).settings.arguments as Map<String, dynamic>;
       _problem = params['problem'] as ProblemDetails;
       _actualLevel = params['actualLevel'] as int;
       _idealLevel = params['idealLevel'] as int;
@@ -52,7 +52,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   String _formatTimeOfDay(TimeOfDay time) {
     final today = DateTime.now();
     final dateTime =
-        DateTime(today.year, today.month, today.day, time.hour, time.minute);
+    DateTime(today.year, today.month, today.day, time.hour, time.minute);
     return DateFormat.jm().format(dateTime);
   }
 
@@ -212,7 +212,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                     'Oops!',
                                   ),
                                   content:
-                                      Text('An unexpected error occurred!'),
+                                  Text('An unexpected error occurred!'),
                                   actions: <Widget>[
                                     FlatButton(
                                       textColor: theme.accentColor,
@@ -270,7 +270,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                     }).then((_) {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                         '/',
-                        (route) => false,
+                            (route) => false,
                       );
                     }).catchError((err) {
                       print(err);
